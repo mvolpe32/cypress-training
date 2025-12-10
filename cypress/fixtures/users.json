@@ -9,9 +9,9 @@
                     { "email": "diana@example.com", "password": "pass1234","membership": "Normal" },
                     { "email": "miles@example.com", "password": "pass-pass","membership": "Normal" } 
                   ],
-    "invalidUsers": [ { "email": "test@example.com", "password": "password","membership": "premium" },
-                      { "email": "ororo@example.com", "password": "password123!","membership": "premium" },
-                      { "email": " test@test.com", "password": "pass1234","membership": "normal" }
+    "invalidUsers": [ { "email": "test@example.com", "password": "password","membership": "Premium" },
+                      { "email": "ororo@example.com", "password": "password123!","membership": "Premium" },
+                      { "email": " test@test.com", "password": "pass1234","membership": "Normal" }
                     ]
           }
 }

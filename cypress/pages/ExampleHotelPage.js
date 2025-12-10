@@ -8,5 +8,6 @@ export default class ExampleHotelPage extends BasePage {
     email() { return this.byId('email'); }    
     password() { return this.byId('password'); }
     submitLogin() { return this.byId('login-button'); }
+    reserve() { return this.contains('a','Reserve'); }
     error()    { return this.byDataTest('error'); }
 }
