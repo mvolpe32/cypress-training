@@ -1,7 +1,8 @@
-import SauceLoginPage from './SauceLoginPage';
-import SauceInventoryPage from './SauceInventoryPage';
-import DemoBlazeCatalogPage from './DemoBlazeCatalogPage';
-import ExampleHotelPage from './ExampleHotelPage';
+import SauceLoginPage from './saucedemo/SauceLoginPage';
+import SauceInventoryPage from './saucedemo/SauceInventoryPage';
+import DemoBlazeCatalogPage from './demoblaze/DemoBlazeCatalogPage';
+import ExampleHotelPage from './exampleHotel/ExampleHotelPage';
+import ReservePage from './exampleHotel/ReservePage';
 
 const cache = {};
 
@@ -21,5 +22,9 @@ export const PageFactory = {
   exampleHotel() {
     if (!cache.exampleHotel) cache.exampleHotel = new ExampleHotelPage();
     return cache.exampleHotel;
+  },
+  reserve() {
+    if (!cache.reserve) cache.reserve = new ReservePage();
+    return cache.reserve;
   }
 };
