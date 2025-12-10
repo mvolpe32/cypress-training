@@ -1,5 +1,5 @@
 import { PageFactory } from "../../pages/PageFactory";
-
+//cmabio para prueba git
 describe('Example Hotel - Login', ()=> {
     const hotel = PageFactory.exampleHotel();
     it('Login correcto', ()=> {
