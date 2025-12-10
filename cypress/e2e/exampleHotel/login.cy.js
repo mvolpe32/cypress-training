@@ -1,13 +1,29 @@
 import { PageFactory } from "../../pages/PageFactory";
+import users from '../../fixtures/users.json';
 
 describe('Example Hotel - Login', ()=> {
     const hotel = PageFactory.exampleHotel();
-    it('Login correcto', ()=> {
-        hotel.open();
-        hotel.loginBtn().click();
-        hotel.email().should('be.visible').type('clark@example.com');
-        hotel.password().type('password');
-        cy.contains('button', '#login-button').click();
-        cy.url().should('include', '/mypage');
+    const { validUsers, invalidUsers } = users.exampleHotelUsers;
+
+    validUsers.forEach(({email, password, membership}) => {
+        it('Login successful', ()=> {
+            hotel.open();
+            hotel.openLogin().click();
+            hotel.email().should('be.visible').type(email);
+            hotel.password().type(password);
+            hotel.submitLogin().click();
+            cy.url().should('include', '/mypage');
+            cy.get('#rank').should('contain.text', membership);
+        });
+    });
+    invalidUsers.forEach(({email, password}) => {
+        it('Login unsuccessful', ()=> {
+            hotel.open();
+            hotel.openLogin().click();
+            hotel.email().should('be.visible').type(email);
+            hotel.password().type(password);
+            hotel.submitLogin().click();
+            cy.contains('Email or password is invalid.').should('be.visible');
+        });
     });
 });

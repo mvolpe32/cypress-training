@@ -2,5 +2,16 @@
   "saucedemo": {
     "standard": { "username": "standard_user", "password": "secret_sauce" },
     "locked":   { "username": "locked_out_user", "password": "secret_sauce" }
-  }
+  },
+  "exampleHotelUsers": {
+    "validUsers": [ { "email": "clark@example.com", "password": "password","membership": "Premium" },
+                    { "email": "ororo@example.com", "password": "pa55w0rd!","membership": "Premium" },
+                    { "email": "diana@example.com", "password": "pass1234","membership": "Normal" },
+                    { "email": "miles@example.com", "password": "pass-pass","membership": "Normal" } 
+                  ],
+    "invalidUsers": [ { "email": "test@example.com", "password": "password","membership": "premium" },
+                      { "email": "ororo@example.com", "password": "password123!","membership": "premium" },
+                      { "email": " test@test.com", "password": "pass1234","membership": "normal" }
+                    ]
+          }
 }
