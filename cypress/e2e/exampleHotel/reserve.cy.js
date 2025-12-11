@@ -31,7 +31,9 @@ describe('Example Hotel - Reserve a room successfully with login', ()=> {
         //Chequeo que se despliegue el combo, ingreso email
         cy.get('#email').should('be.visible').clear().type('testing@test.com');
         reserveRoom.specialRequests().clear().type('No smoking room, please.');
-        reserveRoom.submitButton().click();
+        reserveRoom.submitReserveButton().click();
+        cy.contains('Thank you').should('be.visible');
+        cy.get('button','Close').click();
     });
 });
 

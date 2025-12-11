@@ -11,6 +11,7 @@ export default class ReservePage extends BasePage {
     //confirmation() { return this.byId('contact'); }
     specialRequests() { return this.byId('comment'); }
     submitButton() { return this.byId('submit-button'); }
+    submitReserveButton() { return cy.contains('button', 'Submit Reservation'); }
     
     //Funciones auxiliares
     getFutureDate(days) {
