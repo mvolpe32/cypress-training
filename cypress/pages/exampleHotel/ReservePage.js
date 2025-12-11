@@ -10,8 +10,8 @@ export default class ReservePage extends BasePage {
     username() { return this.byId('username'); }
     //confirmation() { return this.byId('contact'); }
     specialRequests() { return this.byId('comment'); }
-    submitButton() { return this.byId('submit-button'); }
-    submitReserveButton() { return cy.contains('button', 'Submit Reservation'); }
+    confirmReservation() { return this.byId('submit-button'); }
+    submitButton() { return cy.contains('button', 'Submit'); }
     
     //Funciones auxiliares
     getFutureDate(days) {
