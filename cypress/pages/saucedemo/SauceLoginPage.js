@@ -1,4 +1,4 @@
-import BasePage from "./BasePage";
+import BasePage from "../BasePage";
 
 export default class SauceLoginPage extends BasePage {
     username() { return this.byDataTest('username'); }

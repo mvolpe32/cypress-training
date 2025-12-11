@@ -9,8 +9,8 @@ describe('Example Hotel - Login', ()=> {
         it('Login successful', ()=> {
             hotel.open();
             hotel.openLogin().click();
-            hotel.email().should('be.visible').type(email);
-            hotel.password().type(password);
+            hotel.loginEmail().should('be.visible').type(email);
+            hotel.loginPassword().type(password);
             hotel.submitLogin().click();
             cy.url().should('include', '/mypage');
             cy.get('#rank').should('contain.text', membership);
@@ -20,8 +20,8 @@ describe('Example Hotel - Login', ()=> {
         it('Login unsuccessful', ()=> {
             hotel.open();
             hotel.openLogin().click();
-            hotel.email().should('be.visible').type(email);
-            hotel.password().type(password);
+            hotel.loginEmail().should('be.visible').type(email);
+            hotel.loginPassword().type(password);
             hotel.submitLogin().click();
             cy.contains('Email or password is invalid.').should('be.visible');
         });

@@ -9,8 +9,8 @@ describe('Example Hotel - Logout', ()=> {
         it('Logout Successful', ()=> {
             hotel.open();
             hotel.openLogin().click();
-            hotel.email().should('be.visible').type(email);
-            hotel.password().type(password);
+            hotel.loginEmail().should('be.visible').type(email);
+            hotel.loginPassword().type(password);
             hotel.submitLogin().click();
             //Chequeo que el login fue exitoso
             cy.url().should('include', '/mypage');

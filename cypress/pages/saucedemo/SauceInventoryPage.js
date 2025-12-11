@@ -1,4 +1,4 @@
-import BasePage from "./BasePage";
+import BasePage from "../BasePage";
 
 export default class SauceInventoryPage extends BasePage {
     cartBadge() { return cy.get('.shopping_cart_badge'); }

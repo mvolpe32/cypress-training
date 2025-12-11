@@ -1,4 +1,4 @@
-import BasePage from "./BasePage";
+import BasePage from "../BasePage";
 
 export default class DemoBlazeCatalogPage extends BasePage {
     open() { return cy.visit('https://www.demoblaze.com'); }
